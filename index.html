@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AuraGems | Mystic Gemstone Recommendation & Wisdom Portal</title>
+  <meta name="description" content="Discover your perfect crystal match. AuraGems uses zodiac alignments, energy frequencies, and spiritual intentions to recommend the perfect healing crystals for your soul.">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Elegant Serifs and Clean Sans-Serifs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Interstellar Interactive Canvas Background -->
+  <canvas id="starry-canvas"></canvas>
+  
+  <!-- Navigation Header -->
+  <header class="app-header">
+    <div class="logo">
+      <i class="fa-solid fa-gem aura-glow"></i>
+      <span class="brand-name">AURA<span class="brand-sub">GEMS</span></span>
+    </div>
+    <nav class="nav-links">
+      <button class="nav-btn active" data-tab="quiz" id="nav-quiz-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> Oracle Quiz</button>
+      <button class="nav-btn" data-tab="explorer" id="nav-explorer-btn"><i class="fa-solid fa-compass"></i> Gem Explorer</button>
+      <button class="nav-btn" data-tab="comparison" id="nav-compare-btn"><i class="fa-solid fa-scale-balanced"></i> Compare Board</button>
+      <button class="nav-btn" data-tab="altar" id="nav-altar-btn"><i class="fa-solid fa-hands-holding-circle"></i> My Altar <i class="fa-solid fa-lock" style="font-size:0.75rem; margin-left:2px; opacity:0.6;" id="altar-lock-icon"></i></button>
+    </nav>
+    <div class="user-nav-container" id="user-nav-container">
+      <button class="nav-btn auth-btn" id="nav-login-btn"><i class="fa-solid fa-user-astronaut"></i> Sign In</button>
+    </div>
+  </header>
+
+  <!-- Main Workspaces -->
+  <main class="app-container">
+    
+    <!-- SECTION 1: Dynamic Quiz Wizard -->
+    <section id="quiz-section" class="tab-panel active">
+      <!-- Generated Dynamically via Quiz.js -->
+    </section>
+
+    <!-- SECTION 2: Gemstone Explorer -->
+    <section id="explorer-section" class="tab-panel">
+      <!-- Generated Dynamically via Explorer.js -->
+    </section>
+
+    <!-- SECTION 3: Detailed Comparison Dashboard -->
+    <section id="comparison-section" class="tab-panel">
+      <!-- Generated Dynamically via Comparison.js -->
+    </section>
+
+    <!-- SECTION 4: Personalized Altar Sanctuary -->
+    <section id="altar-section" class="tab-panel">
+      <!-- Generated Dynamically via Altar.js -->
+    </section>
+
+  </main>
+
+  <!-- FLOATING SIDE DRAWER: Full Gemstone Profile -->
+  <aside id="details-drawer" class="details-drawer">
+    <!-- Generated Dynamically via Explorer.js or Result.js -->
+  </aside>
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+
+  <!-- FLOATING COMPONENT: Ambient Sound Controller -->
+  <div class="ambient-controls">
+    <button id="ambient-toggle" class="ambient-btn" title="Toggle Cosmic Meditation Music">
+      <i class="fa-solid fa-volume-xmark"></i>
+      <span>Cosmic Ambient</span>
+    </button>
+  </div>
+
+  <!-- FLOATING COMPONENT: Quick Comparison Tray -->
+  <div id="comparison-tray" class="comparison-tray">
+    <div class="tray-content">
+      <span id="tray-count"><i class="fa-solid fa-circle-nodes"></i> 0 Crystals Selected</span>
+      <button id="tray-compare-btn" class="tray-action-btn">Compare Now</button>
+      <button id="tray-clear-btn" class="tray-clear-btn" title="Clear Tray"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+  </div>
+
+  <!-- DYNAMIC TOAST CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
